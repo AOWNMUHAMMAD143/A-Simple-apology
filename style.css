@@ -1,0 +1,277 @@
+/* ==== Reset & Base ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b81 0%, #6a82fb 100%);
+}
+
+/* Landing Page Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =======================
+   PAGE 1 (Index.html)
+   ======================= */
+
+/* Hero/Header */
+.header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffdde1, #ee9ca7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  color: #ffe6e6;
+  line-height: 1.8;
+}
+
+/* Main Content Section */
+.main-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.apology-box {
+  max-width: 750px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #fdfdfd;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  line-height: 1.7;
+}
+
+.apology-box em {
+  color: #ffd1d1;
+}
+.apology-box strong {
+  color: #ffe97d;
+}
+
+/* CTA Button */
+.navigation {
+  text-align: center;
+}
+.next-button {
+  background: linear-gradient(90deg, #ff6b81, #ff3b61);
+  border: none;
+  padding: 18px 36px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 24px rgba(255, 59, 97, 0.4);
+}
+.next-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(255, 59, 97, 0.55);
+}
+
+/* Footer */
+.footer {
+  padding: 25px 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #ffe6e6;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255,255,255,0.15);
+}
+
+/* =======================
+   PAGE 2 (page2.html)
+   ======================= */
+.page2 {
+  min-height: 100vh;
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  overflow-x: hidden;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+/* Floating Hearts Animation */
+.hearts {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+.hearts::before,
+.hearts::after {
+  content: "💖";
+  position: absolute;
+  font-size: 2.2rem;
+  animation: float 10s infinite ease-in-out;
+  opacity: 0.7;
+}
+.hearts::before {
+  left: 15%; animation-delay: 0s;
+}
+.hearts::after {
+  left: 70%; animation-delay: 2s;
+}
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+  25% { opacity: 1; }
+  100% { transform: translateY(-10%) scale(1.2); opacity: 0; }
+}
+
+/* Page 2 Header */
+.page2-header {
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+.page2-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff0f5, #ffd6e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page2-header p {
+  font-size: 1.1rem;
+  color: #ffe6ef;
+}
+
+/* Hero */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease;
+}
+#forgiveBtn {
+  background: #fff;
+  color: #ff4f7b;
+  border: none;
+  padding: 16px 34px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+#forgiveBtn:hover {
+  background: #ffe6ef;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 26px rgba(255, 255, 255, 0.35);
+}
+#finalMsg {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff8f8;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Apology Section */
+.apology {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 60px 20px;
+  z-index: 2;
+}
+.apology-box {
+  max-width: 750px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+  text-align: left;
+  line-height: 1.7;
+  color: #fff;
+}
+.apology-box h2 {
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  color: #ffe3ec;
+}
+
+/* Page 2 Footer */
+.page2-footer {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffe6ef;
+  font-size: 0.95rem;
+  border-top: 2px solid rgba(255,255,255,0.15);
+  z-index: 2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   Responsive Adjustments
+   ======================= */
+@media (max-width: 768px) {
+  .header h1, .page2-header h1 { font-size: 2.2rem; }
+  .header p, .page2-header p { font-size: 1rem; }
+  .apology-box { padding: 24px; font-size: 1rem; }
+  .next-button, #forgiveBtn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+  #typing, .hero h2 { font-size: 1.4rem; }
+  #finalMsg { font-size: 1.1rem; }
+}
